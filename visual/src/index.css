@@ -48,6 +48,7 @@ code {
 }
 
 .h-dash {
+  color: #004982;
   margin-top: 1.5rem;
   font-size: 1.5rem;
 }
@@ -67,7 +68,7 @@ code {
 }
 
 .card-count {
-  margin-right: 1rem;
+  margin-right: 1.75rem;
   width: 17rem;
   height: 10rem;
   border: 2px solid #efebfe;
@@ -76,7 +77,7 @@ code {
 }
 
 .card-mean {
-  margin: 0 1rem;
+  margin: 0 1.75rem;
   width: 17rem;
   height: 10rem;
   border: 2px solid #ebfaff;
@@ -85,7 +86,7 @@ code {
 }
 
 .card-max {
-  margin: 0 1rem;
+  margin: 0 1.75rem;
   width: 17rem;
   height: 10rem;
   border: 2px solid #edfdf5;
