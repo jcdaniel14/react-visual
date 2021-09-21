@@ -29,6 +29,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f6f8fa;
 }
 
 code {
@@ -37,7 +38,8 @@ code {
 }
 
 /* HEADER - CSS */
-.header {
+.header-container {
+  margin: 0 1rem;
   grid-area: head;
 }
 
@@ -48,64 +50,131 @@ code {
 }
 
 .h-dash {
-  color: #004982;
-  margin-top: 1.5rem;
+  color: #293253;
+  margin: 0.5rem 0;
   font-size: 1.5rem;
 }
 
 .h-sub {
-  margin-top: 0.25rem;
+  margin: 0.25rem 0;
   font-size: 0.9rem;
-  font-weight: 600;
-  color: #999;
+  font-weight: 700;
+  color: #666;
 }
 
 /* CARDS - CSS */
 .card-container {
   grid-area: cards;
-  margin-top: 1.5rem;
+  margin: 0 1rem;
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.opts-container {
+  grid-area: options;
+  margin: 0 1rem;
+  display: flex;
+  align-items: center;
 }
 
 .card-count {
-  margin-right: 1.75rem;
-  width: 17rem;
-  height: 10rem;
-  border: 2px solid #efebfe;
-  background-color: #efebfe;
+  margin-right: 0.75rem;
+  width: 33%;
+  height: 6.25rem;
+  border: 0px solid #eeebff;
+  background-color: #eeebff;
   border-radius: 25px;
 }
 
 .card-mean {
-  margin: 0 1.75rem;
-  width: 17rem;
-  height: 10rem;
-  border: 2px solid #ebfaff;
-  background-color: #ebfaff;
+  margin: 0 0.75rem;
+  width: 33%;
+  height: 6.25rem;
+  border: 0px solid #fef7d8;
+  background-color: #fef7d8;
   border-radius: 25px;
 }
 
 .card-max {
-  margin: 0 1.75rem;
-  width: 17rem;
-  height: 10rem;
-  border: 2px solid #edfdf5;
-  background-color: #edfdf5;
+  margin-left: 0.75rem;
+  width: 33%;
+  height: 6.25rem;
+  border: 0px solid #e2f9ff;
+  background-color: #e2f9ff;
   border-radius: 25px;
+}
+
+.card-h1 {
+  margin: 0 1.25rem !important;
+  font-size: 0.85rem;
+  width: 12rem;
+  border-radius: 20px;
+}
+
+.card-h1 > div {
+  border-radius: 8px;
+  border-width: 2px;
+  border-color: #004982 !important;
+  background-color: #f6f8fa !important;
+  box-shadow: 0 0 0 1px #f6f8fa !important;
+}
+
+.card-h1 > div:hover {
+  border-radius: 8px;
+  border-width: 2px;
+  border-color: #004982 !important;
+  background-color: #f6f8fa !important;
+  box-shadow: 0 0 0 1px #f6f8fa !important;
+}
+
+.card-btn {
+  border: 2px solid #004982;
+  background-color: #004982;
+  color: #fff;
+  width: 11rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-family: Quicksand;
+  font-weight: 700;
+  transition: all 0.2s ease-in;
+}
+
+.card-btn-disabled {
+  border: 2px solid #ccc;
+  background-color: #ccc;
+  color: #333;
+  width: 11rem;
+  height: 2.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  transition: all 0.2s ease-in;
+}
+
+.card-btn:hover {
+  cursor: pointer;
+  background-color: #005ba0;
 }
 
 /* VISUALIZACION - CSS */
-.graph {
+.graph-container {
   grid-area: vis;
-  margin-top: 2rem;
+  margin: 0.5rem 1rem;
 }
 
 .vis {
-  width: 60rem;
-  height: 30rem;
-  border: 2px solid #fef7d8;
-  border-radius: 25px;
-  background-color: #fef7d8;
+  width: 77rem;
+  height: 27.5rem;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 5px 10px 20px 0px #33333333;
 }
 
 .vis-container {
@@ -116,27 +185,27 @@ code {
 
 .vis-h1 {
   /* display: flex; */
-  margin: 0.75rem 2rem;
+  margin: 0.5rem 2rem;
   font-size: 0.85rem;
 }
 
 .vis-h2 {
-  margin: 0.75rem 2rem;
+  margin: 0.25rem 1rem;
   font-size: 0.85rem;
   color: #7c8091;
-  width: 12rem;
+  width: 15rem;
 }
 
 .vis-h2 > div {
-  border-color: #fef7d8 !important;
-  background-color: #fef7d8 !important;
-  box-shadow: 0 0 0 1px #fef7d8 !important;
+  border-color: #fff !important;
+  background-color: #fff !important;
+  box-shadow: 0 0 0 1px #fff !important;
 }
 
 .vis-h2 > div:hover {
-  border-color: #fef7d8 !important;
-  background-color: #fef7d8 !important;
-  box-shadow: 0 0 0 1px #fef7d8 !important;
+  border-color: #fff !important;
+  background-color: #fff !important;
+  box-shadow: 0 0 0 1px #fff !important;
 }
 
 .vis-plot {
@@ -147,11 +216,42 @@ code {
 .container {
   font-family: Quicksand;
   font-weight: 700;
-  margin: 2rem 0;
+  margin: 0.5rem 0;
   display: grid;
-  grid-template-columns: 0.2fr 1fr 1fr 1fr 0.2fr;
+  grid-template-columns: 0.1fr 2fr 1fr 0.1fr;
+  grid-template-rows: 0.3fr 0.5fr 2fr;
   grid-template-areas:
-    ". head head head ."
-    ". cards cards cards ."
-    ". vis vis options .";
+    ". head head ."
+    ". cards options ."
+    ". vis vis .";
+}
+
+/* ICONS - CSS */
+.icon-count {
+  display: flex;
+  width: 32px;
+  height: 32px;
+  mask-image: url("./assets/icons/count.svg");
+  mask-size: cover;
+  background-color: #563bfb;
+  margin-right: 0.75rem;
+}
+.icon-mean {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  mask-image: url("./assets/icons/mean.svg");
+  mask-size: cover;
+  background-color: #ffd000;
+  margin-right: 0.5rem;
+}
+
+.icon-max {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  mask-image: url("./assets/icons/max.svg");
+  mask-size: cover;
+  background-color: #00c4fa;
+  margin-right: 0.5rem;
 }
