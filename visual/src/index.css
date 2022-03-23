@@ -37,6 +37,35 @@ code {
     monospace;
 }
 
+.container {
+  font-family: Quicksand;
+  font-weight: 700;
+  margin: 0.5rem 0;
+  display: grid;
+  grid-template-columns: 0.1fr 2fr 1fr 0.1fr;
+  grid-template-rows: 0.2fr 0.5fr 1fr;
+  grid-template-areas:
+    ". head head ."
+    ". tabs tabs ."
+    ". cards options ."
+    ". vis vis .";
+}
+
+.tabs-container {
+  margin: 0 1rem;
+  grid-area: tabs;
+}
+
+.card-container {
+  display: flex;
+  width: 70%;
+}
+
+/*TABS*/
+.MuiTabs-indicator {
+  background-color: #001e3c !important;
+}
+
 /* HEADER - CSS */
 .header-container {
   margin: 0 1rem;
@@ -50,7 +79,7 @@ code {
 }
 
 .h-dash {
-  color: #293253;
+  color: #001e3c;
   margin: 0.5rem 0;
   font-size: 1.5rem;
 }
@@ -63,13 +92,10 @@ code {
 }
 
 /* CARDS - CSS */
-.card-container {
-  grid-area: cards;
-  margin: 0 1rem;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+.pred-container {
+  margin-top: 1rem;
 }
+
 .opts-container {
   grid-area: options;
   margin: 0 1rem;
@@ -79,29 +105,29 @@ code {
 
 .card-count {
   margin-right: 0.75rem;
-  width: 33%;
   height: 6.25rem;
   border: 0px solid #eeebff;
   background-color: #eeebff;
   border-radius: 25px;
+  padding: 0 1rem;
 }
 
 .card-mean {
   margin: 0 0.75rem;
-  width: 33%;
   height: 6.25rem;
   border: 0px solid #fef7d8;
   background-color: #fef7d8;
   border-radius: 25px;
+  padding: 0 1rem;
 }
 
 .card-max {
   margin-left: 0.75rem;
-  width: 33%;
   height: 6.25rem;
   border: 0px solid #e2f9ff;
   background-color: #e2f9ff;
   border-radius: 25px;
+  padding: 0 1rem;
 }
 
 .card-h1 {
@@ -131,7 +157,7 @@ code {
   border: 2px solid #004982;
   background-color: #004982;
   color: #fff;
-  width: 11rem;
+  width: 9rem;
   height: 2.5rem;
   display: flex;
   justify-content: center;
@@ -213,18 +239,7 @@ code {
   justify-content: center;
 }
 
-.container {
-  font-family: Quicksand;
-  font-weight: 700;
-  margin: 0.5rem 0;
-  display: grid;
-  grid-template-columns: 0.1fr 2fr 1fr 0.1fr;
-  grid-template-rows: 0.3fr 0.5fr 2fr;
-  grid-template-areas:
-    ". head head ."
-    ". cards options ."
-    ". vis vis .";
-}
+
 
 /* ICONS - CSS */
 .icon-count {

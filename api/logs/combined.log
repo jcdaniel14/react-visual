@@ -112,3 +112,20 @@
 {"timestamp":"2021-09-21 12:10:50","message":"[production] Listening on this port 80","level":"info"}
 {"timestamp":"2021-09-21 12:11:24","message":"[production] Listening on this port 80","level":"info"}
 {"timestamp":"2021-09-21 12:13:02","message":"[production] Listening on this port 80","level":"info"}
+{"timestamp":"2022-03-15 08:48:34","message":"[production] Listening on this port 80","level":"info"}
+{"timestamp":"2022-03-23 15:35:15","message":"[production] Listening on this port 80","level":"info"}
+{"timestamp":"2022-03-23 18:10:04","message":"[production] Listening on this port 80","level":"info"}
+{"timestamp":"2022-03-23 18:23:24","message":"[production] Listening on this port 80","level":"info"}
+{"timestamp":"2022-03-23 18:24:32","message":"[production] Listening on this port 80","level":"info"}
+{"timestamp":"2022-03-23 18:24:36","user":"fp","level":"info","message":"C:\\Users\\gsantiago\\Documents\\proyecto francisco\\api/scripts/venv/python C:\\Users\\gsantiago\\Documents\\proyecto francisco\\api/scripts/ml/get_file_status.py"}
+{"timestamp":"2022-03-23 18:24:36","user":"fp","level":"error","message":{"killed":false,"code":1,"signal":null,"cmd":"C:\\Users\\gsantiago\\Documents\\proyecto francisco\\api/scripts/venv/python C:\\Users\\gsantiago\\Documents\\proyecto francisco\\api/scripts/ml/get_file_status.py"}}
+{"timestamp":"2022-03-23 18:27:05","message":"[production] Listening on this port 80","level":"info"}
+{"timestamp":"2022-03-23 18:27:40","user":"fp","level":"info","message":"C:\\Users\\gsantiago\\Documents\\proyectoFrancisco\\api/scripts/venv/python C:\\Users\\gsantiago\\Documents\\proyectoFrancisco\\api/scripts/ml/get_file_status.py"}
+{"timestamp":"2022-03-23 18:27:40","user":"fp","level":"error","message":{"killed":false,"code":1,"signal":null,"cmd":"C:\\Users\\gsantiago\\Documents\\proyectoFrancisco\\api/scripts/venv/python C:\\Users\\gsantiago\\Documents\\proyectoFrancisco\\api/scripts/ml/get_file_status.py"}}
+{"timestamp":"2022-03-23 18:28:32","message":"[production] Listening on this port 80","level":"info"}
+{"timestamp":"2022-03-23 18:28:38","user":"fp","level":"info","message":"C:\\Users\\gsantiago\\Documents\\proyectoFrancisco\\api/scripts/venv/Scripts/python C:\\Users\\gsantiago\\Documents\\proyectoFrancisco\\api/scripts/ml/get_file_status.py"}
+{"timestamp":"2022-03-23 18:29:58","message":"[production] Listening on this port 80","level":"info"}
+{"timestamp":"2022-03-23 18:30:00","user":"fp","route":"getFileStatus","level":"info","message":"C:\\Users\\gsantiago\\Documents\\proyectoFrancisco\\api/scripts/venv/Scripts/python C:\\Users\\gsantiago\\Documents\\proyectoFrancisco\\api/scripts/ml/get_file_status.py"}
+{"timestamp":"2022-03-23 18:30:21","user":"fp","route":"getFileStatus","level":"info","message":"C:\\Users\\gsantiago\\Documents\\proyectoFrancisco\\api/scripts/venv/Scripts/python C:\\Users\\gsantiago\\Documents\\proyectoFrancisco\\api/scripts/ml/get_file_status.py"}
+{"timestamp":"2022-03-23 18:30:36","user":"fp","route":"getFileStatus","level":"info","message":"C:\\Users\\gsantiago\\Documents\\proyectoFrancisco\\api/scripts/venv/Scripts/python C:\\Users\\gsantiago\\Documents\\proyectoFrancisco\\api/scripts/ml/get_file_status.py"}
+{"timestamp":"2022-03-23 18:39:37","user":"fp","route":"getFileStatus","level":"info","message":"C:\\Users\\gsantiago\\Documents\\proyectoFrancisco\\api/scripts/venv/Scripts/python C:\\Users\\gsantiago\\Documents\\proyectoFrancisco\\api/scripts/ml/get_file_status.py"}
