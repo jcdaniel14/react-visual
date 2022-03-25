@@ -7,6 +7,7 @@ import Box from '@mui/material/Box';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Prediction from './Prediction.js';
+import Estadistica from './Estadistica.js';
 import { Component } from "react";
 
 class Vistas extends Component {
@@ -39,14 +40,14 @@ class Vistas extends Component {
     return (
       <div className="tabs-container">
         <div>
-          <Tabs value={this.state.value} onChange={handleChange} centered>
+          <Tabs variant="fullWidth" value={this.state.value} onChange={handleChange} centered>
             <Tabby icon={<AnalyticsIcon />} label="Analisis Estadistico"/>
             <Tabby icon={<AutoGraphIcon />} label="Prediccion" />
           </Tabs>
         </div>
         <div>
           <Box mt={3} role="tabpanel" hidden={this.state.value !== 0}>
-            Estadistica stuff
+            <Estadistica/>
           </Box>
           <Box mt={3} role="tabpanel" hidden={this.state.value !== 1}>
             <Prediction/>
