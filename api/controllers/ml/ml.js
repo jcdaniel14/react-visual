@@ -33,3 +33,18 @@ exports.getHeatMap = async function(req, res) {
   let cmd = `${appDir}/scripts/venv/Scripts/python ${appDir}/scripts/ml/get_heatmap.py`;
   return executeScript(cmd, "getHeatMap", req, res, false);
 }
+
+exports.getBoxPlotEE = async function(req, res) {
+  let cmd = `${appDir}/scripts/venv/Scripts/python ${appDir}/scripts/ml/get_boxplots_ee.py`;
+  return executeScript(cmd, "getBoxplotEE", req, res, false);
+}
+
+exports.getBoxPlotT = async function(req, res) {
+  let cmd = `${appDir}/scripts/venv/Scripts/python ${appDir}/scripts/ml/get_boxplots_t.py`;
+  return executeScript(cmd, "getBoxplotT", req, res, false);
+}
+
+exports.getFacets = async function(req, res) {
+  let cmd = `${appDir}/scripts/venv/Scripts/python ${appDir}/scripts/ml/get_facets.py`;
+  return executeScript(cmd, "getFacets", req, res, false);
+}

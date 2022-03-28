@@ -2,21 +2,21 @@ import { Component } from "react";
 import Plot from "react-plotly.js";
 const HOST = "http://localhost";
 
-class Graph extends Component {
+class HeatMap extends Component {
   constructor(props) {
     super(props);
     this.state = {
       data: [],
       layout: {
         title:{
-          text: "Correlacion entre variables",
+          text: this.props.title,
           font:{
             family: "Quicksand Bold"
           }
         },
         autosize: true,
         width: 800,
-        height: 400,
+        height: 600,
         margin: {
           l: 100,
           r: 100,
@@ -33,15 +33,11 @@ class Graph extends Component {
     };
   }
 
-  setAnnotations(data){
-    console.log("Anotated");
-  }
-
   componentDidMount() {
     const setAnnotations = (xval, yval, zval)=>{
       let myLayout = {...this.state.layout}
-      for ( var i = 0; i < yval.length; i++ ) {
-        for ( var j = 0; j < xval.length; j++ ) {
+      for (let i = 0; i < yval.length; i++ ) {
+        for (let j = 0; j < xval.length; j++ ) {
           let textColor = "black"
           let currentValue = zval[i][j];
           if (currentValue > 0.0)
@@ -90,4 +86,4 @@ class Graph extends Component {
   }
 }
 
-export default Graph;
+export default HeatMap;
