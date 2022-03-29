@@ -7,11 +7,8 @@ import Facets from "./Facets.js";
 class Estadistica extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      
-    };
+    this.state = {};
   }
-
   render() {
     return (
         <Carousel>

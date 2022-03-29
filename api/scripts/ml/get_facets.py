@@ -9,11 +9,6 @@ def main():
     payload = {}
     df = pd.read_csv(f"{path}/files/clean/dataset_clima.csv")
     df.tiempo = df.tiempo.astype("datetime64")
-    # daily = df.groupby(pd.Grouper(key="tiempo", freq="B")).mean().reset_index()
-    # daily = df.groupby(df["tiempo"].dt.weekday).mean().reset_index()
-    # daily = daily.sort_values("tiempo")
-    # df = daily[["tiempo", "energia_activa"]]
-    # print(df)
     days = ["Lun", "Mar", "Mie", "Jue", "Vie", "Sab", "Dom"]
     for j in range(1, 13):
         data = []

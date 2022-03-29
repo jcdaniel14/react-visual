@@ -11,12 +11,13 @@ class Prediction extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      data: [],
+      dataset: "Default",
       count: this.props.count,
       mean: this.props.mean,
       max: this.props.max,
       loading: false,
       uploading: false,
-      ts: [],
     };
   }
   getFileStatus(filename){
@@ -75,8 +76,10 @@ class Prediction extends Component {
       .then((res) => res.json())
       .then((result) => {
         console.log(result.msg);
-        if(result.msg === "ok")
+        if(result.msg === "ok"){
           this.getFileStatus("dataset_prueba.csv");
+          this.setState({dataset: "Uploaded"});
+        }
       })
       .catch((err)=> {
         console.log(err);
@@ -85,21 +88,21 @@ class Prediction extends Component {
 
     const predictModel = () => {
       this.setState({ loadingModel: !this.state.loadingModel });
-      fetch(`${HOST}/api/getPredictedTS`, {
+      fetch(`${HOST}/api/getPrediction`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ option: "show" }),
+        body: JSON.stringify({ show: true }),
       })
         .then((res) => res.json())
         .then((data) => {
-          this.setState({ ts: data.ts });
+          this.setState({ data: data.msg });
         });
     };
 
     return (
       <div className="pred-container">
         <div style={{ display: "flex", alignItems: "center" }}>
-          <Cards count={this.state.count} mean={this.state.mean} max={this.state.max}/>
+          <Cards dataset={this.state.dataset} count={this.state.count} mean={this.state.mean} max={this.state.max}/>
           <Box sx={{position:"relative"}}>
             <label>
               <Input accept="text/csv" id="upfile" type="file" name="dataset_prueba.csv" onChange={uploadDataset}/>
@@ -117,7 +120,7 @@ class Prediction extends Component {
         </div>
 
         <div style={{ marginTop: "1rem", display: "flex" }}>
-          <Graph ts={this.state.ts} />
+          <Graph data={this.state.data} title={"Energía activa · Modelo LSTM"}/>
         </div>
       </div>
     );

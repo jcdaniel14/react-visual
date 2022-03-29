@@ -1,14 +1,12 @@
-const { dirname } = require('path');
+const { dirname } = require("path");
 const appDir = dirname(require.main.filename);
 const { exec } = require("child_process");
 const logger = require("../../logger/logger");
 
 const executeScript = function (cmd, route, req, res, debug = false) {
-  exec(cmd, (err, stdout, _stderr) => {
+  exec(cmd, { maxBuffer: 1024 * 1024 * 10 }, (err, stdout, _stderr) => {
     if (err) logger.error(err, { user: "fp", route: route });
-    const rs = JSON.parse(
-      stdout.substring(stdout.indexOf("{"), stdout.length).trim()
-    );
+    const rs = JSON.parse(stdout.substring(stdout.indexOf("{"), stdout.length).trim());
     if (debug) logger.info(rs, { user: "fp", route: route });
     res.status(200).json(rs);
   });
@@ -17,34 +15,41 @@ const executeScript = function (cmd, route, req, res, debug = false) {
 exports.getFileStatus = async function (req, res) {
   console.log(req.body);
   let cmd = "";
-  if (req.body.name)
-    cmd = `${appDir}/scripts/venv/Scripts/python ${appDir}/scripts/ml/get_file_status.py --name "${req.body.name}"`;  
-  else
-    cmd = `${appDir}/scripts/venv/Scripts/python ${appDir}/scripts/ml/get_file_status.py`;
+  if (req.body.name) cmd = `${appDir}/scripts/venv/Scripts/python ${appDir}/scripts/ml/get_file_status.py --name "${req.body.name}"`;
+  else cmd = `${appDir}/scripts/venv/Scripts/python ${appDir}/scripts/ml/get_file_status.py`;
   console.log(cmd);
   return executeScript(cmd, "getFileStatus", req, res, false);
 };
 
 exports.uploadDataset = function (req, res) {
-  return res.status(200).send({msg: "ok"});
+  return res.status(200).send({ msg: "ok" });
 };
 
-exports.getHeatMap = async function(req, res) {
+exports.getHeatMap = async function (req, res) {
   let cmd = `${appDir}/scripts/venv/Scripts/python ${appDir}/scripts/ml/get_heatmap.py`;
   return executeScript(cmd, "getHeatMap", req, res, false);
-}
+};
 
-exports.getBoxPlotEE = async function(req, res) {
+exports.getBoxPlotEE = async function (req, res) {
   let cmd = `${appDir}/scripts/venv/Scripts/python ${appDir}/scripts/ml/get_boxplots_ee.py`;
   return executeScript(cmd, "getBoxplotEE", req, res, false);
-}
+};
 
-exports.getBoxPlotT = async function(req, res) {
+exports.getBoxPlotT = async function (req, res) {
   let cmd = `${appDir}/scripts/venv/Scripts/python ${appDir}/scripts/ml/get_boxplots_t.py`;
   return executeScript(cmd, "getBoxplotT", req, res, false);
-}
+};
 
-exports.getFacets = async function(req, res) {
+exports.getFacets = async function (req, res) {
   let cmd = `${appDir}/scripts/venv/Scripts/python ${appDir}/scripts/ml/get_facets.py`;
   return executeScript(cmd, "getFacets", req, res, false);
-}
+};
+
+exports.getPrediction = async function (req, res) {
+  //TODO cambiar virtualenvironment para CUDAs
+  let cmd;
+  if (req.body.uploaded) cmd = `C:/Users/gsantiago/Documents/proyectoFrancisco/venv/Scripts/python ${appDir}/scripts/ml/get_prediction.py --uploaded`;
+  else cmd = `C:/Users/gsantiago/Documents/proyectoFrancisco/venv/Scripts/python ${appDir}/scripts/ml/get_prediction.py`;
+  logger.info(cmd);
+  return executeScript(cmd, "getPrediction", req, res, false);
+};

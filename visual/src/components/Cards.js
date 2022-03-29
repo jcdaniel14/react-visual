@@ -15,6 +15,13 @@ class Cards extends Component {
   render() {
     return (
       <div className="card-container">
+        <div className="card-dataset">
+          <div style={{ fontSize: "0.9rem", color: "#666", margin: "1rem 1rem 0.35rem 1rem" }}>Dataset</div>
+          <div style={{ display: "flex", justifyContent: "center", alignItems: "center", fontSize: "1.75rem", paddingRight: "1rem" }}>
+            <div className="icon-dataset"></div>
+            <div style={{ color: "#333" }}>{this.props.dataset}</div>
+          </div>
+        </div>
         <div className="card-count">
           <div style={{ fontSize: "0.9rem", color: "#666", margin: "1rem 1rem 0.35rem 1rem" }}>Total de observaciones</div>
           <div style={{ display: "flex", justifyContent: "center", alignItems: "center", fontSize: "1.75rem", paddingRight: "1rem" }}>

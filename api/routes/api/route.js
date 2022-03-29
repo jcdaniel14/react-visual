@@ -17,12 +17,13 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 router.post("/getTimeSeries", ts.getTimeSeries);
+
 router.post("/getFileStatus", ml.getFileStatus);
 router.post("/uploadDataset", upload.single("dataset"), ml.uploadDataset);
 router.post("/getHeatMap", ml.getHeatMap);
 router.post("/getBoxPlotEE", ml.getBoxPlotEE);
 router.post("/getBoxPlotT", ml.getBoxPlotT);
 router.post("/getFacets", ml.getFacets);
-// router.post("/getPredictedTS", ml.getPredictedTS);
+router.post("/getPrediction", ml.getPrediction);
 
 module.exports = router;

@@ -288,3 +288,27 @@
 {"timestamp":"2022-03-28 10:28:45","message":"[production] Listening on this port 80","level":"info"}
 {"timestamp":"2022-03-28 10:30:26","message":"[production] Listening on this port 80","level":"info"}
 {"timestamp":"2022-03-28 13:32:57","message":"[production] Listening on this port 80","level":"info"}
+{"timestamp":"2022-03-28 13:59:35","message":"[production] Listening on this port 80","level":"info"}
+{"timestamp":"2022-03-28 16:21:31","message":"[production] Listening on this port 80","level":"info"}
+{"timestamp":"2022-03-28 16:26:27","user":"fp","route":"getPrediction","level":"error","message":{"killed":false,"code":1,"signal":null,"cmd":"C:/Users/gsantiago/Documents/proyectoFrancisco/venv/Scripts/python C:\\Users\\gsantiago\\Documents\\proyectoFrancisco\\api/scripts/ml/get_prediction.py"}}
+{"timestamp":"2022-03-28 16:28:52","message":"[production] Listening on this port 80","level":"info"}
+{"timestamp":"2022-03-28 16:29:11","message":"C:/Users/gsantiago/Documents/proyectoFrancisco/venv/Scripts/python C:\\Users\\gsantiago\\Documents\\proyectoFrancisco\\api/scripts/ml/get_prediction.py","level":"info"}
+{"timestamp":"2022-03-28 16:32:53","user":"fp","route":"getPrediction","level":"error","message":{"killed":false,"code":1,"signal":null,"cmd":"C:/Users/gsantiago/Documents/proyectoFrancisco/venv/Scripts/python C:\\Users\\gsantiago\\Documents\\proyectoFrancisco\\api/scripts/ml/get_prediction.py"}}
+{"timestamp":"2022-03-28 16:41:47","message":"[production] Listening on this port 80","level":"info"}
+{"timestamp":"2022-03-28 16:41:52","message":"C:/Users/gsantiago/Documents/proyectoFrancisco/venv/Scripts/python C:\\Users\\gsantiago\\Documents\\proyectoFrancisco\\api/scripts/ml/get_prediction.py","level":"info"}
+{"timestamp":"2022-03-28 16:41:54","user":"fp","route":"getPrediction","level":"error","message":{"code":"ERR_CHILD_PROCESS_STDIO_MAXBUFFER","cmd":"C:/Users/gsantiago/Documents/proyectoFrancisco/venv/Scripts/python C:\\Users\\gsantiago\\Documents\\proyectoFrancisco\\api/scripts/ml/get_prediction.py"}}
+{"timestamp":"2022-03-28 16:43:13","message":"[production] Listening on this port 80","level":"info"}
+{"timestamp":"2022-03-28 16:43:25","message":"C:/Users/gsantiago/Documents/proyectoFrancisco/venv/Scripts/python C:\\Users\\gsantiago\\Documents\\proyectoFrancisco\\api/scripts/ml/get_prediction.py","level":"info"}
+{"timestamp":"2022-03-28 16:43:27","user":"fp","route":"getPrediction","level":"error","message":{"code":"ERR_CHILD_PROCESS_STDIO_MAXBUFFER","cmd":"C:/Users/gsantiago/Documents/proyectoFrancisco/venv/Scripts/python C:\\Users\\gsantiago\\Documents\\proyectoFrancisco\\api/scripts/ml/get_prediction.py"}}
+{"timestamp":"2022-03-28 16:45:21","message":"[production] Listening on this port 80","level":"info"}
+{"timestamp":"2022-03-28 16:45:34","message":"C:/Users/gsantiago/Documents/proyectoFrancisco/venv/Scripts/python C:\\Users\\gsantiago\\Documents\\proyectoFrancisco\\api/scripts/ml/get_prediction.py","level":"info"}
+{"timestamp":"2022-03-28 16:46:45","message":"[production] Listening on this port 80","level":"info"}
+{"timestamp":"2022-03-28 16:46:52","message":"C:/Users/gsantiago/Documents/proyectoFrancisco/venv/Scripts/python C:\\Users\\gsantiago\\Documents\\proyectoFrancisco\\api/scripts/ml/get_prediction.py","level":"info"}
+{"timestamp":"2022-03-28 16:49:29","message":"[production] Listening on this port 80","level":"info"}
+{"timestamp":"2022-03-28 16:49:38","message":"C:/Users/gsantiago/Documents/proyectoFrancisco/venv/Scripts/python C:\\Users\\gsantiago\\Documents\\proyectoFrancisco\\api/scripts/ml/get_prediction.py","level":"info"}
+{"timestamp":"2022-03-28 16:50:17","message":"C:/Users/gsantiago/Documents/proyectoFrancisco/venv/Scripts/python C:\\Users\\gsantiago\\Documents\\proyectoFrancisco\\api/scripts/ml/get_prediction.py","level":"info"}
+{"timestamp":"2022-03-28 16:52:48","message":"C:/Users/gsantiago/Documents/proyectoFrancisco/venv/Scripts/python C:\\Users\\gsantiago\\Documents\\proyectoFrancisco\\api/scripts/ml/get_prediction.py","level":"info"}
+{"timestamp":"2022-03-28 17:10:58","message":"C:/Users/gsantiago/Documents/proyectoFrancisco/venv/Scripts/python C:\\Users\\gsantiago\\Documents\\proyectoFrancisco\\api/scripts/ml/get_prediction.py","level":"info"}
+{"timestamp":"2022-03-28 18:23:52","message":"C:/Users/gsantiago/Documents/proyectoFrancisco/venv/Scripts/python C:\\Users\\gsantiago\\Documents\\proyectoFrancisco\\api/scripts/ml/get_prediction.py","level":"info"}
+{"timestamp":"2022-03-28 18:48:27","message":"C:/Users/gsantiago/Documents/proyectoFrancisco/venv/Scripts/python C:\\Users\\gsantiago\\Documents\\proyectoFrancisco\\api/scripts/ml/get_prediction.py","level":"info"}
+{"timestamp":"2022-03-28 19:05:45","message":"C:/Users/gsantiago/Documents/proyectoFrancisco/venv/Scripts/python C:\\Users\\gsantiago\\Documents\\proyectoFrancisco\\api/scripts/ml/get_prediction.py","level":"info"}
