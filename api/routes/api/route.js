@@ -11,7 +11,7 @@ const storage = multer.diskStorage({
         cb(null, `${appDir}/scripts/ml/files/upload/`);
     },
     filename: function(req, file, cb) {
-        cb(null, "dataset_prueba.csv");
+        cb(null, "dataset_prueba_raw.csv");
     }
 });
 const upload = multer({ storage: storage });

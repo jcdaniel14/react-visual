@@ -22,6 +22,7 @@ exports.getFileStatus = async function (req, res) {
 };
 
 exports.uploadDataset = function (req, res) {
+  let cmd = `${appDir}/scripts/venv/Script/python ${appDir}/scripts/ml/prepare_upload.py`;
   return res.status(200).send({ msg: "ok" });
 };
 
