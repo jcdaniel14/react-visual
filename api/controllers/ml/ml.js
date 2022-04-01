@@ -22,8 +22,9 @@ exports.getFileStatus = async function (req, res) {
 };
 
 exports.uploadDataset = function (req, res) {
-  let cmd = `${appDir}/scripts/venv/Script/python ${appDir}/scripts/ml/prepare_upload.py`;
-  return res.status(200).send({ msg: "ok" });
+  let cmd = `${appDir}/scripts/venv/Scripts/python ${appDir}/scripts/ml/prepare_upload.py`;
+  console.log(cmd);
+  return executeScript(cmd, "uploadDataset", req, res, false);
 };
 
 exports.getHeatMap = async function (req, res) {

@@ -66,6 +66,7 @@ class Prediction extends Component {
 
     const uploadDataset = (e) => {
       console.log("Uploading...");
+      this.setState({uploading: true});
       const formData = new FormData();
       console.log(e.target.files[0]);
       formData.append("dataset", e.target.files[0]);
@@ -76,27 +77,37 @@ class Prediction extends Component {
       .then((res) => res.json())
       .then((result) => {
         console.log(result.msg);
-        if(result.msg === "ok"){
+        if(result.status === "ok"){
           this.getFileStatus("dataset_prueba.csv");
           this.setState({dataset: "Uploaded"});
         }
+
+        this.setState({uploading: false});
       })
       .catch((err)=> {
         console.log(err);
+        this.setState({uploading: false});
       });
     };
 
     const predictModel = () => {
-      this.setState({ loadingModel: !this.state.loadingModel });
+      this.setState({ loading: true });
       fetch(`${HOST}/api/getPrediction`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ show: true }),
+        body: JSON.stringify({ uploaded: this.state.dataset==="Uploaded" }),
       })
-        .then((res) => res.json())
-        .then((data) => {
-          this.setState({ data: data.msg });
-        });
+      .then((res) => res.json())
+      .then((data) => {
+        this.setState({ data: data.msg });
+
+        this.setState({ loading: false });
+      })
+      .catch((err)=> {
+        console.log(err);
+
+        this.setState({ loading: false });
+      });
     };
 
     return (
@@ -106,7 +117,7 @@ class Prediction extends Component {
           <Box sx={{position:"relative"}}>
             <label>
               <Input accept="text/csv" id="upfile" type="file" name="dataset_prueba.csv" onChange={uploadDataset}/>
-              <BtnG variant="contained" component="span" disabled={this.state.uploading} style={{ marginRight: "1rem" }}>
+              <BtnG variant="contained" component="span" disabled={this.state.uploading || this.state.loading} style={{ marginRight: "1rem" }}>
                 Subir dataset
               </BtnG>
               {this.state.uploading && (
@@ -114,9 +125,14 @@ class Prediction extends Component {
               )}
             </label>
           </Box>
-          <Btn variant="contained" onClick={predictModel} disabled={this.state.loading}>
-            Pronosticar
-          </Btn>
+          <Box sx={{position:"relative"}}>
+            <Btn variant="contained" onClick={predictModel} disabled={this.state.loading || this.state.uploading}>
+              Pronosticar
+            </Btn>
+            {this.state.loading && (
+              <CircularProgress size={24} sx={{ position: "absolute", top: "50%", left: "50%", marginTop: "-12px", marginLeft: "-12px" }}/>
+            )}
+          </Box>
         </div>
 
         <div style={{ marginTop: "1rem", display: "flex" }}>

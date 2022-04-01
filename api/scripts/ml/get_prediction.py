@@ -13,10 +13,7 @@ SEMESTRE = 24 * 31 * 6  # 24hx31dx6m
 
 def main():
     data = []
-    if args.uploaded:
-        df1 = pd.read_csv(f"{path}/files/upload/dataset_prueba.csv", parse_dates=True, index_col=0)
-    else:
-        df1 = pd.read_csv(f"{path}/files/clean/dataset_modelo.csv", parse_dates=True, index_col=0)
+    df1 = pd.read_csv(f"{path}/files/clean/dataset_modelo.csv", parse_dates=True, index_col=0)
     electricity = electric_supervised(df1, MAX_SIZE, 1)
     weather = weather_supervised(df1, MAX_SIZE, 0)
     full = weather.join(electricity)
@@ -28,7 +25,10 @@ def main():
     if len(model.checkpoint) == 0:
         model.start_training(X_train, X_test, y_train, y_test)
 
-    prev_fut = df1
+    if args.uploaded:
+        prev_fut = pd.read_csv(f"{path}/files/upload/dataset_prueba.csv", parse_dates=True, index_col=0)
+    else:
+        prev_fut = pd.read_csv(f"{path}/files/clean/dataset_modelo.csv", parse_dates=True, index_col=0)
     prev_fut = prev_fut.loc[:, ["temp_celsius", "hr", "pandemia", "month", "day", "weekday", "sin_hour", "cos_hour", "energia_activa"]]
     pred, act, y_f = daily_consumption_forecast_1(prev_fut, mm, ss, MAX_SIZE, model)
     input = df1.iloc[:MAX_SIZE + 1, :]
@@ -38,7 +38,7 @@ def main():
     data.append(trace)
 
     rs = {"status": "ok", "msg": data}
-    to_file(rs)
+    # to_file(rs)
     print(json.dumps(rs))
 
 
@@ -60,4 +60,4 @@ def from_file():
 parser = argparse.ArgumentParser(description="Predicciones del modelo")
 parser.add_argument("--uploaded", action="store_true", help="Indicador de carga de archivo de pruebas")
 args = parser.parse_args()
-main_2()
+main()
