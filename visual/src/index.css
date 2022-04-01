@@ -47,12 +47,10 @@ code {
   margin: 0.5rem 0;
   display: grid;
   grid-template-columns: 0.1fr 2fr 1fr 0.1fr;
-  grid-template-rows: 0.1fr 0.5fr 1fr;
+  grid-template-rows: 0.1fr 1fr;
   grid-template-areas:
     ". head head ."
     ". tabs tabs ."
-    ". cards options ."
-    ". vis vis .";
 }
 
 .tabs-container {
@@ -98,13 +96,6 @@ code {
 /* CARDS - CSS */
 .pred-container {
   margin-top: 1rem;
-}
-
-.opts-container {
-  grid-area: options;
-  margin: 0 1rem;
-  display: flex;
-  align-items: center;
 }
 
 .card-dataset {

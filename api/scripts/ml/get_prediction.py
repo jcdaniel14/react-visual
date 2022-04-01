@@ -31,7 +31,7 @@ def main():
         prev_fut = pd.read_csv(f"{path}/files/clean/dataset_modelo.csv", parse_dates=True, index_col=0)
     prev_fut = prev_fut.loc[:, ["temp_celsius", "hr", "pandemia", "month", "day", "weekday", "sin_hour", "cos_hour", "energia_activa"]]
     pred, act, y_f = daily_consumption_forecast_1(prev_fut, mm, ss, MAX_SIZE, model)
-    input = df1.iloc[:MAX_SIZE + 1, :]
+    input = prev_fut.iloc[:MAX_SIZE + 1, :]
     trace = {"x": list(input.index.astype(str)), "y": list(input["energia_activa"].values), "mode": "lines", "name": "Input"}
     data.append(trace)
     trace = {"x": list(act.iloc[MAX_SIZE:, :].index.astype(str)), "y": list(y_f), "mode": "lines", "name": "Output"}
@@ -60,4 +60,7 @@ def from_file():
 parser = argparse.ArgumentParser(description="Predicciones del modelo")
 parser.add_argument("--uploaded", action="store_true", help="Indicador de carga de archivo de pruebas")
 args = parser.parse_args()
-main()
+if args.uploaded:
+    main()
+else:
+    main_2()

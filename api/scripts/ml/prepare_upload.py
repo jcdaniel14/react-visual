@@ -29,5 +29,7 @@ def cyclical_features(df, col_name, period, start_num=0):
     }
     return df.assign(**kwargs).drop(columns=[col_name])
 
-
-main()
+try:
+    main()
+except ValueError:
+    print(json.dumps({"status": "error", "msg": "El dataset enviado no cumple con el formato establecido.\n\nPor favor verificar que el archivo CSV contenga solo 5 columnas, las cuales corresponden a tiempo, temp_celsius, hr, pandemia y energia_activa"}))
