@@ -19,6 +19,7 @@ def main():
     df = cyclical_features(df, 'hour', 24, 0)
     df = df[["tiempo", "energia_activa", "temp_celsius", "hr", "pandemia", "month", "day", "weekday", "sin_hour", "cos_hour"]]
     df.to_csv(f"{path}/files/upload/dataset_prueba.csv", index=False)
+    print(json.dumps({"status": "ok"}))
 
 
 def cyclical_features(df, col_name, period, start_num=0):
