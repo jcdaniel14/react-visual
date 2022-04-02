@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.c621e1b4.chunk.css",
-    "main.js": "/static/js/main.9876864e.chunk.js",
-    "main.js.map": "/static/js/main.9876864e.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.f8fa763c.js",
-    "runtime-main.js.map": "/static/js/runtime-main.f8fa763c.js.map",
-    "static/js/2.47f98b55.chunk.js": "/static/js/2.47f98b55.chunk.js",
-    "static/js/2.47f98b55.chunk.js.map": "/static/js/2.47f98b55.chunk.js.map",
-    "static/js/3.161e59ad.chunk.js": "/static/js/3.161e59ad.chunk.js",
-    "static/js/3.161e59ad.chunk.js.map": "/static/js/3.161e59ad.chunk.js.map",
+    "main.css": "/static/css/main.94840d33.chunk.css",
+    "main.js": "/static/js/main.db975aed.chunk.js",
+    "main.js.map": "/static/js/main.db975aed.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.b4f5dc43.js",
+    "runtime-main.js.map": "/static/js/runtime-main.b4f5dc43.js.map",
+    "static/js/2.485d1ffb.chunk.js": "/static/js/2.485d1ffb.chunk.js",
+    "static/js/2.485d1ffb.chunk.js.map": "/static/js/2.485d1ffb.chunk.js.map",
+    "static/js/3.85f68b48.chunk.js": "/static/js/3.85f68b48.chunk.js",
+    "static/js/3.85f68b48.chunk.js.map": "/static/js/3.85f68b48.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.c621e1b4.chunk.css.map": "/static/css/main.c621e1b4.chunk.css.map",
-    "static/js/2.47f98b55.chunk.js.LICENSE.txt": "/static/js/2.47f98b55.chunk.js.LICENSE.txt",
+    "static/css/main.94840d33.chunk.css.map": "/static/css/main.94840d33.chunk.css.map",
+    "static/js/2.485d1ffb.chunk.js.LICENSE.txt": "/static/js/2.485d1ffb.chunk.js.LICENSE.txt",
     "static/media/index.css": "/static/media/mean.99071b25.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.f8fa763c.js",
-    "static/js/2.47f98b55.chunk.js",
-    "static/css/main.c621e1b4.chunk.css",
-    "static/js/main.9876864e.chunk.js"
+    "static/js/runtime-main.b4f5dc43.js",
+    "static/js/2.485d1ffb.chunk.js",
+    "static/css/main.94840d33.chunk.css",
+    "static/js/main.db975aed.chunk.js"
   ]
 }

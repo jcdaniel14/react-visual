@@ -349,3 +349,4 @@
 {"timestamp":"2022-04-01 11:21:32","user":"fp","route":"uploadDataset","level":"error","message":{"killed":false,"code":1,"signal":null,"cmd":"D:\\Documentos\\proyectoFrancisco\\react-playground\\api/scripts/venv/Scripts/python D:\\Documentos\\proyectoFrancisco\\react-playground\\api/scripts/ml/prepare_upload.py"}}
 {"timestamp":"2022-04-01 11:22:21","message":"[production] Listening on this port 80","level":"info"}
 {"timestamp":"2022-04-01 11:25:16","message":"[production] Listening on this port 80","level":"info"}
+{"timestamp":"2022-04-02 14:30:44","message":"[production] Listening on this port 80","level":"info"}
