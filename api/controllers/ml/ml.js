@@ -15,7 +15,8 @@ const executeScript = function (cmd, route, req, res, debug = false) {
 exports.getFileStatus = async function (req, res) {
   console.log(req.body);
   let cmd = "";
-  if (req.body.name) cmd = `${appDir}/scripts/venv/Scripts/python ${appDir}/scripts/ml/get_file_status.py --name "${req.body.name}"`;
+  if (req.body.name)
+    cmd = `${appDir}/scripts/venv/Scripts/python ${appDir}/scripts/ml/get_file_status.py --name "${req.body.name}"`;
   else cmd = `${appDir}/scripts/venv/Scripts/python ${appDir}/scripts/ml/get_file_status.py`;
   console.log(cmd);
   return executeScript(cmd, "getFileStatus", req, res, false);
@@ -50,8 +51,9 @@ exports.getFacets = async function (req, res) {
 exports.getPrediction = async function (req, res) {
   //TODO cambiar virtualenvironment para CUDAs
   let cmd;
-  if (req.body.uploaded) cmd = `C:/Users/gsantiago/Documents/proyectoFrancisco/venv/Scripts/python ${appDir}/scripts/ml/get_prediction.py --uploaded`;
-  else cmd = `C:/Users/gsantiago/Documents/proyectoFrancisco/venv/Scripts/python ${appDir}/scripts/ml/get_prediction.py`;
-  logger.info(cmd);
+  if (req.body.uploaded)
+    cmd = `${appDir}/scripts/venv/Scripts/python ${appDir}/scripts/ml/get_prediction.py --uploaded`;
+  else cmd = `${appDir}/scripts/venv/Scripts/python ${appDir}/scripts/ml/get_prediction.py`;
+  console.log(cmd);
   return executeScript(cmd, "getPrediction", req, res, false);
 };

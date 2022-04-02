@@ -327,3 +327,25 @@
 {"timestamp":"2022-03-31 21:10:46","message":"C:/Users/gsantiago/Documents/proyectoFrancisco/venv/Scripts/python C:\\Users\\gsantiago\\Documents\\proyectoFrancisco\\api/scripts/ml/get_prediction.py --uploaded","level":"info"}
 {"timestamp":"2022-03-31 21:14:03","message":"C:/Users/gsantiago/Documents/proyectoFrancisco/venv/Scripts/python C:\\Users\\gsantiago\\Documents\\proyectoFrancisco\\api/scripts/ml/get_prediction.py --uploaded","level":"info"}
 {"timestamp":"2022-03-31 21:26:07","message":"C:/Users/gsantiago/Documents/proyectoFrancisco/venv/Scripts/python C:\\Users\\gsantiago\\Documents\\proyectoFrancisco\\api/scripts/ml/get_prediction.py --uploaded","level":"info"}
+{"timestamp":"2022-04-01 10:04:53","message":"[production] Listening on this port 80","level":"info"}
+{"timestamp":"2022-04-01 10:08:21","message":"C:/Users/gsantiago/Documents/proyectoFrancisco/venv/Scripts/python D:\\Documentos\\proyectoFrancisco\\react-playground\\api/scripts/ml/get_prediction.py","level":"info"}
+{"timestamp":"2022-04-01 10:08:21","user":"fp","route":"getPrediction","level":"error","message":{"killed":false,"code":1,"signal":null,"cmd":"C:/Users/gsantiago/Documents/proyectoFrancisco/venv/Scripts/python D:\\Documentos\\proyectoFrancisco\\react-playground\\api/scripts/ml/get_prediction.py"}}
+{"timestamp":"2022-04-01 10:10:18","message":"[production] Listening on this port 80","level":"info"}
+{"timestamp":"2022-04-01 10:10:20","message":"C:/Users/gsantiago/Documents/proyectoFrancisco/venv/Scripts/python D:\\Documentos\\proyectoFrancisco\\react-playground\\api/scripts/ml/get_prediction.py","level":"info"}
+{"timestamp":"2022-04-01 10:10:20","user":"fp","route":"getPrediction","level":"error","message":{"killed":false,"code":1,"signal":null,"cmd":"C:/Users/gsantiago/Documents/proyectoFrancisco/venv/Scripts/python D:\\Documentos\\proyectoFrancisco\\react-playground\\api/scripts/ml/get_prediction.py"}}
+{"timestamp":"2022-04-01 10:10:34","message":"[production] Listening on this port 80","level":"info"}
+{"timestamp":"2022-04-01 10:10:34","user":"fp","route":"getPrediction","level":"error","message":{"killed":false,"code":1,"signal":null,"cmd":"C:/Users/gsantiago/Documents/proyectoFrancisco/venv/Scripts/python D:\\Documentos\\proyectoFrancisco\\react-playground\\api/scripts/ml/get_prediction.py"}}
+{"timestamp":"2022-04-01 10:11:58","message":"[production] Listening on this port 80","level":"info"}
+{"timestamp":"2022-04-01 10:12:21","user":"fp","route":"getPrediction","level":"error","message":{"killed":false,"code":1,"signal":null,"cmd":"D:\\Documentos\\proyectoFrancisco\\react-playground\\api/scripts/venv/Scripts/python D:\\Documentos\\proyectoFrancisco\\react-playground\\api/scripts/ml/get_prediction.py"}}
+{"timestamp":"2022-04-01 10:15:29","message":"[production] Listening on this port 80","level":"info"}
+{"timestamp":"2022-04-01 10:15:33","user":"fp","route":"getPrediction","level":"error","message":{"killed":false,"code":1,"signal":null,"cmd":"D:\\Documentos\\proyectoFrancisco\\react-playground\\api/scripts/venv/Scripts/python D:\\Documentos\\proyectoFrancisco\\react-playground\\api/scripts/ml/get_prediction.py"}}
+{"timestamp":"2022-04-01 10:17:19","message":"[production] Listening on this port 80","level":"info"}
+{"timestamp":"2022-04-01 10:17:23","user":"fp","route":"getPrediction","level":"error","message":{"killed":false,"code":1,"signal":null,"cmd":"D:\\Documentos\\proyectoFrancisco\\react-playground\\api/scripts/venv/Scripts/python D:\\Documentos\\proyectoFrancisco\\react-playground\\api/scripts/ml/get_prediction.py"}}
+{"timestamp":"2022-04-01 10:18:25","message":"[production] Listening on this port 80","level":"info"}
+{"timestamp":"2022-04-01 10:31:01","user":"fp","route":"uploadDataset","level":"error","message":{"killed":false,"code":1,"signal":null,"cmd":"D:\\Documentos\\proyectoFrancisco\\react-playground\\api/scripts/venv/Scripts/python D:\\Documentos\\proyectoFrancisco\\react-playground\\api/scripts/ml/prepare_upload.py"}}
+{"timestamp":"2022-04-01 10:54:05","message":"[production] Listening on this port 80","level":"info"}
+{"timestamp":"2022-04-01 11:20:48","user":"fp","route":"uploadDataset","level":"error","message":{"killed":false,"code":1,"signal":null,"cmd":"D:\\Documentos\\proyectoFrancisco\\react-playground\\api/scripts/venv/Scripts/python D:\\Documentos\\proyectoFrancisco\\react-playground\\api/scripts/ml/prepare_upload.py"}}
+{"timestamp":"2022-04-01 11:20:57","message":"[production] Listening on this port 80","level":"info"}
+{"timestamp":"2022-04-01 11:21:32","user":"fp","route":"uploadDataset","level":"error","message":{"killed":false,"code":1,"signal":null,"cmd":"D:\\Documentos\\proyectoFrancisco\\react-playground\\api/scripts/venv/Scripts/python D:\\Documentos\\proyectoFrancisco\\react-playground\\api/scripts/ml/prepare_upload.py"}}
+{"timestamp":"2022-04-01 11:22:21","message":"[production] Listening on this port 80","level":"info"}
+{"timestamp":"2022-04-01 11:25:16","message":"[production] Listening on this port 80","level":"info"}
