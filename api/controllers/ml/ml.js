@@ -43,6 +43,17 @@ exports.getBoxPlotT = async function (req, res) {
   return executeScript(cmd, "getBoxplotT", req, res, false);
 };
 
+exports.getBoxPlotHR = async function (req, res) {
+  let cmd = `${appDir}/scripts/venv/Scripts/python ${appDir}/scripts/ml/get_boxplots_hr.py`;
+  return executeScript(cmd, "getBoxplotHR", req, res, false);
+};
+
+exports.getBoxPlotV = async function (req, res) {
+  let cmd = `${appDir}/scripts/venv/Scripts/python ${appDir}/scripts/ml/get_boxplots_v.py`;
+  return executeScript(cmd, "getBoxplotV", req, res, false);
+};
+
+
 exports.getFacets = async function (req, res) {
   let cmd = `${appDir}/scripts/venv/Scripts/python ${appDir}/scripts/ml/get_facets.py`;
   return executeScript(cmd, "getFacets", req, res, false);
@@ -56,4 +67,9 @@ exports.getPrediction = async function (req, res) {
   else cmd = `${appDir}/scripts/venv/Scripts/python ${appDir}/scripts/ml/get_prediction.py`;
   console.log(cmd);
   return executeScript(cmd, "getPrediction", req, res, false);
+};
+
+exports.getRawEE = async function (req, res) {
+  let cmd = `${appDir}/scripts/venv/Scripts/python ${appDir}/scripts/ml/get_raw_ee.py`;
+  return executeScript(cmd, "getRawEE", req, res, false);
 };

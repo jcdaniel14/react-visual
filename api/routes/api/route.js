@@ -20,7 +20,10 @@ router.post("/uploadDataset", upload.single("dataset"), ml.uploadDataset);
 router.post("/getHeatMap", ml.getHeatMap);
 router.post("/getBoxPlotEE", ml.getBoxPlotEE);
 router.post("/getBoxPlotT", ml.getBoxPlotT);
+router.post("/getBoxPlotHR", ml.getBoxPlotHR);
+router.post("/getBoxPlotV", ml.getBoxPlotV);
 router.post("/getFacets", ml.getFacets);
 router.post("/getPrediction", ml.getPrediction);
+router.post("/getRawEE", ml.getRawEE);
 
 module.exports = router;

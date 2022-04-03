@@ -7,7 +7,6 @@ path = os.path.dirname(os.path.abspath(__file__))
 
 def main():
     data = []
-    traces = {}
     df = pd.read_csv(f"{path}/files/clean/dataset_clima.csv")
     df.tiempo = df.tiempo.astype("datetime64")
     for i in range(1, 13):

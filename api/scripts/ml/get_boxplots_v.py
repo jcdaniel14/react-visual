@@ -12,7 +12,7 @@ def main():
     for i in range(1, 13):
         monthly = df.loc[(df["tiempo"].dt.month == i)]
         traces = {}
-        traces["y"] = list(monthly["temp_celsius"].values)
+        traces["y"] = list(monthly["dir_viento"].values)
         traces["name"] = i
         traces["type"] = "box"
         data.append(traces)

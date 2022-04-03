@@ -104,34 +104,34 @@ code {
   border: 0 solid #CBF3D2;
   background-color: #CBF3D2;
   border-radius: 25px;
-  padding: 0 1rem;
+  padding: 0 0.5rem;
 }
 
 .card-count {
   margin: 0 0.75rem;
   height: 6.25rem;
-  border: 0px solid #eeebff;
+  border: 0 solid #eeebff;
   background-color: #eeebff;
   border-radius: 25px;
-  padding: 0 1rem;
+  padding: 0 0.5rem;
 }
 
 .card-mean {
   margin: 0 0.75rem;
   height: 6.25rem;
-  border: 0px solid #fef7d8;
+  border: 0 solid #fef7d8;
   background-color: #fef7d8;
   border-radius: 25px;
-  padding: 0 1rem;
+  padding: 0 0.5rem;
 }
 
 .card-max {
   margin-left: 0.75rem;
   height: 6.25rem;
-  border: 0px solid #e2f9ff;
+  border: 0 solid #e2f9ff;
   background-color: #e2f9ff;
   border-radius: 25px;
-  padding: 0 1rem;
+  padding: 0 0.5rem;
 }
 
 .card-h1 {
