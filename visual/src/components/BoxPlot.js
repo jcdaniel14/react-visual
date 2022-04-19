@@ -10,16 +10,16 @@ class BoxPlot extends Component {
       type: this.props.name,
       layout: {
         yaxis: {
-          title: this.props.title
+          title: this.props.title,
         },
-        title:{
+        title: {
           text: this.props.title,
-          font:{
-            family: "Quicksand Bold"
-          }
+          font: {
+            family: "Quicksand Bold",
+          },
         },
         xaxis: {
-          title: "Meses"
+          title: "Horas",
         },
         width: 800,
         height: 600,
@@ -34,7 +34,7 @@ class BoxPlot extends Component {
         plot_bgcolor: "#f6f8fa",
         font: { family: "Quicksand" },
         showlegend: false,
-      }
+      },
     };
   }
 
@@ -44,19 +44,14 @@ class BoxPlot extends Component {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ show: true }),
     })
-    .then((res) => res.json())
-    .then((data) => {
-      this.setState({ data: data.msg })
-    });
+      .then((res) => res.json())
+      .then((data) => {
+        this.setState({ data: data.msg });
+      });
   }
 
   render() {
-    return (
-      <Plot
-        data={this.state.data}
-        layout={this.state.layout}
-      />
-    );
+    return <Plot data={this.state.data} layout={this.state.layout} />;
   }
 }
 

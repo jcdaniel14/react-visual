@@ -1,6 +1,6 @@
 import { Component } from "react";
 import Plot from "react-plotly.js";
-import MenuItem from "@mui/material/MenuItem"
+import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
 import InputLabel from "@mui/material/InputLabel";
 import FormControl from "@mui/material/FormControl";
@@ -17,16 +17,16 @@ class Facets extends Component {
       type: this.props.name,
       layout: {
         yaxis: {
-          title: this.props.title
+          title: this.props.title,
         },
-        title:{
+        title: {
           text: this.props.title,
-          font:{
-            family: "Quicksand Bold"
-          }
+          font: {
+            family: "Quicksand Bold",
+          },
         },
         xaxis: {
-          title: "Meses"
+          title: "Dias",
         },
         width: 800,
         height: 600,
@@ -41,7 +41,7 @@ class Facets extends Component {
         plot_bgcolor: "#f6f8fa",
         font: { family: "Quicksand" },
         showlegend: true,
-      }
+      },
     };
   }
 
@@ -53,32 +53,25 @@ class Facets extends Component {
     })
       .then((res) => res.json())
       .then((data) => {
-        this.setState({ payload: data.msg}, ()=>{this.setState({data: this.state.payload[this.state.month]})})
+        this.setState({ payload: data.msg }, () => {
+          this.setState({ data: this.state.payload[this.state.month] });
+        });
       });
   }
 
   render() {
     const handleChange = (e) => {
-      this.setState({month: e.target.value});
-      this.setState({data: this.state.payload[e.target.value]});
-    }
+      this.setState({ month: e.target.value });
+      this.setState({ data: this.state.payload[e.target.value] });
+    };
 
     return (
-      <div style={{display: "flex"}}>
-        <Plot
-          data={this.state.data}
-          layout={this.state.layout}
-        />
-        <Box sx={{ minWidth: 120, margin: "1rem 0 0 2rem"}}>
+      <div style={{ display: "flex" }}>
+        <Plot data={this.state.data} layout={this.state.layout} />
+        <Box sx={{ minWidth: 120, margin: "1rem 0 0 2rem" }}>
           <FormControl fullWidth>
-
             <InputLabel id={"month-l"}>Mes</InputLabel>
-            <Select
-              value={this.state.month}
-              onChange={handleChange}
-              label={"Mes"}
-              id={"month-l"}
-            >
+            <Select value={this.state.month} onChange={handleChange} label={"Mes"} id={"month-l"}>
               <MenuItem value={1}>Enero</MenuItem>
               <MenuItem value={2}>Febrero</MenuItem>
               <MenuItem value={3}>Marzo</MenuItem>
@@ -95,7 +88,6 @@ class Facets extends Component {
           </FormControl>
         </Box>
       </div>
-
     );
   }
 }

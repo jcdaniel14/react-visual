@@ -356,3 +356,6 @@
 {"timestamp":"2022-04-03 11:52:23","user":"fp","route":"getRawEE","level":"error","message":{"killed":false,"code":1,"signal":null,"cmd":"C:\\Users\\gsantiago\\Documents\\proyectoFrancisco\\api/scripts/venv/Scripts/python C:\\Users\\gsantiago\\Documents\\proyectoFrancisco\\api/scripts/ml/get_raw_ee.py"}}
 {"timestamp":"2022-04-03 11:54:24","message":"[production] Listening on this port 80","level":"info"}
 {"timestamp":"2022-04-03 12:01:25","message":"[production] Listening on this port 80","level":"info"}
+{"timestamp":"2022-04-19 18:01:23","message":"[production] Listening on this port 80","level":"info"}
+{"timestamp":"2022-04-19 18:19:51","message":"[production] Listening on this port 80","level":"info"}
+{"timestamp":"2022-04-19 18:26:27","message":"[production] Listening on this port 80","level":"info"}
